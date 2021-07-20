@@ -1,0 +1,19 @@
+{
+  "name": "yimi-bot",
+  "version": "0.0.1",
+  "description": "Bot destinated to manage jdeyimi's chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "tmi.js": "^1.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
