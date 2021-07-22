@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build --base-href=https://jaimeknd77.github.io/yimidroid/"
+    "deploy": "ng build --base-href=/yimidroid/"
   },
   "private": true,
   "dependencies": {
