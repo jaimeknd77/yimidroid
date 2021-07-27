@@ -70,7 +70,8 @@ client.on('chat', (channel, userstate, message, self) => {
 // 30min = 1800000
 setInterval(() => {
     if (timers.getAd()) {
-        client.say('jdeyimi', 'jdeyim1000IQ Gracias por el dinerito jeje jdeyim1000IQ');
+        client.say('jdeyimi', 'Anuncio de 30s');
+        yimi.say('jdeyimi', 'jdeyim1000IQ Gracias por el dinerito jeje jdeyim1000IQ');
         client.say('jdeyimi', '/commercial 30');
     }
 }, 1800000);
