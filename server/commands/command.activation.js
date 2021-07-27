@@ -1,4 +1,4 @@
-class Activation {
+class CommandActivation {
 
     constructor() {
         this.helloActivated = true;
@@ -40,5 +40,5 @@ class Activation {
     }
 }
 
-const commands = new Activation();
+const commands = new CommandActivation();
 module.exports = commands;

@@ -1,6 +1,7 @@
 const tmi = require('tmi.js');
 
 const { commands } = require('./index');
+const { timers } = require('./index');
 
 // Commands
 const hello = require('./commands/hello');
@@ -66,19 +67,29 @@ client.on('chat', (channel, userstate, message, self) => {
     }
 });
 
+// 30min = 1800000
+setInterval(() => {
+    if (timers.getAd()) {
+        client.say('jdeyimi', 'jdeyim1000IQ Gracias por el dinerito jeje jdeyim1000IQ');
+        client.say('jdeyimi', '/commercial 30');
+    }
+}, 1800000);
+
+/*
 yimi.on('hosted', (channel, username, viewers, autohost) => {
     if (!autohost && viewers > 1) {
         client.say(channel, `${username} is now hosting with ${viewers} viewers`);
         yimi.say(channel, `¡Muchas gracias por el host ${username}!`);
-        //promotion(channel, username);
+        promotion(channel, username);
     }
 });
 
 client.on('raided', (channel, username, viewers) => {
     client.say(channel, `${username} has raided with ${viewers} viewers`);
     yimi.say(channel, `¡Muchas gracias por la raid ${username}! jdeyimBrasil jdeyimBrasil jdeyimBrasil jdeyimBrasil jdeyimBrasil`);
-    //promotion(channel, username);
+    promotion(channel, username);
 });
+*/
 
 function isYimi(userstate) {
     return userstate.username === 'jdeyimi';

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const { commands } = require('../index');
+const { timers } = require('../index');
 
 router.get('/status', (req, res) => {
     res.json({
@@ -73,6 +74,22 @@ router.get('/gift/deactivate', (req, res) => {
     res.json({
         command: "gift",
         status: commands.getGift()
+    });
+});
+
+router.get('/timer/ad/activate', (req, res) => {
+    timers.setAd(true);
+    res.json({
+        timer: 'ad',
+        status: timers.getAd()
+    });
+});
+
+router.get('/timer/ad/deactivate', (req, res) => {
+    timers.setAd(false);
+    res.json({
+        timer: 'ad',
+        status: timers.getAd()
     });
 });
 

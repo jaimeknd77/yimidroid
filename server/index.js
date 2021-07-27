@@ -4,6 +4,9 @@ const morgan = require('morgan');
 const commands = require('./commands/command.activation');
 exports.commands = commands;
 
+const timers = require('./timers/timer.activation');
+exports.timers = timers;
+
 const bot = require('./bot');
 
 
@@ -12,6 +15,7 @@ const app = express();
 // Settings
 app.set('port', process.env.PORT || 3000);
 app.set('commands', commands);
+app.set('timers', timers);
 
 // Middlewares
 app.use(morgan('dev'));
