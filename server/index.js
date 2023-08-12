@@ -6,7 +6,6 @@ exports.commands = commands;
 
 const bot = require('./bot');
 
-
 const app = express();
 
 // Settings

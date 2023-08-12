@@ -8,12 +8,14 @@ const love = require('./commands/love');
 const promotion = require('./commands/promotion');
 const gift = require('./commands/gift');
 
+/*
 const yimiOptions = {
     identity: {
         username: 'jdeyimi',
         password: 'oauth:vs6w1n2z2lezrgw1lagho5zqpmkgv8'
     }
 }
+*/
 
 const options = {
     identity: {
@@ -24,10 +26,10 @@ const options = {
         'jdeyimi'
     ]
 }
-const yimi = new tmi.client(yimiOptions);
+//const yimi = new tmi.client(yimiOptions);
 const client = new tmi.client(options);
 
-yimi.connect();
+//yimi.connect();
 client.connect();
 
 client.on('connected', (address, port) => {
@@ -66,6 +68,7 @@ client.on('chat', (channel, userstate, message, self) => {
     }
 });
 
+/*
 yimi.on('hosted', (channel, username, viewers, autohost) => {
     if (!autohost && viewers > 1) {
         client.say(channel, `${username} is now hosting with ${viewers} viewers`);
@@ -79,6 +82,7 @@ client.on('raided', (channel, username, viewers) => {
     yimi.say(channel, `¡Muchas gracias por la raid ${username}! jdeyimBrasil jdeyimBrasil jdeyimBrasil jdeyimBrasil jdeyimBrasil`);
     //promotion(channel, username);
 });
+*/
 
 function isYimi(userstate) {
     return userstate.username === 'jdeyimi';
