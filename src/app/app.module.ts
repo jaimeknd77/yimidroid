@@ -3,22 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
-import { CommandComponent } from './components/command/command.component';
-import { TimerComponent } from './components/timer/timer.component';
-import {InterfaceComponent} from "./components/interface/interface.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatButtonModule} from '@angular/material/button';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    InterfaceComponent,
-    CommandComponent,
-    TimerComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
